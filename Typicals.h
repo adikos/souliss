@@ -100,13 +100,12 @@
 #define Souliss_T1n_AutoOffCoil			0xF0		// Output Feedback OFF in AUTO Mode
 #define Souliss_T1n_GoodNight			0xF1		// Output Feedback ON in GoodNight Mode
 #define Souliss_T1n_BrightValue			0x10		// Default increase and decrease
-#define Souliss_T1n_BrightDefault		0xAA		// Default Bright Value
 
 // Useful defines for T16
 #define	Souliss_T1n_MaxBright			0xFF
 #define	Souliss_T1n_MinBright			0x00
 #define	Souliss_T1n_BrightStep			0x0A
-#define	Souliss_T1n_BrightDefault		0x50
+#define	Souliss_T1n_BrightDefault		0xAA
 
 /*
 

@@ -1,5 +1,5 @@
 /**************************************************************************
-	Souliss
+	Souliss - vNet Virtualized Network
     Copyright (C) 2014  Veseo
 
     This program is free software: you can redistribute it and/or modify
@@ -21,34 +21,27 @@
 /*!
     \file 
     \ingroup
+
+
 */
-#ifndef bconf_ssMCUESP8266_H
-#define bconf_ssMCUESP8266_H
+/**************************************************************************/
+#ifndef VNET_NRF24_H
+#define VNET_NRF24_H
 
-// Expressif ESP8266 Board
-#define MCU_TYPE_INSKETCH
-#define	MCU_TYPE					2
+#include "Arduino.h"
+#include "GetConfig.h"				// need : nRF24UsrCfg.h
 
-#define BOARD_MODEL_INSKETCH
-#define VNET_MEDIA_INSKETCH
-#define ETH_INSKETCH	
+#include "src/RF24.h"
+#include "src/nRF24L01.h"
+#include "SPI.h"
 
-#define	BOARD_MODEL					9		
-#define ETH_W5100  					0
-#define ETH_W5200  					0
-#define ETH_W5500					0
-#define ETH_ENC28J60  				0
-#define WIFI_MRF24					0
-#define WIFI_ESP8266				1
-
-// The ESP8266 works always with two media, it use Media 3 to
-// remove dependence between vNet address and IP address from DHCP
-#define VNET_MEDIA1_ENABLE  		1
-#define VNET_MEDIA3_ENABLE  		1
-
-#define USARTDRIVER_INSKETCH
-#define USART_TXENABLE				0
-#define USART_TXENPIN				2
-#define	USARTDRIVER					Serial
+void vNet_Init_M2();
+void vNet_SetAddress_M2(uint16_t addr);
+uint8_t vNet_Send_M2(uint16_t addr, oFrame *frame, uint8_t len);
+uint8_t vNet_DataAvailable_M2();
+uint8_t vNet_RetrieveData_M2(uint8_t *data);
+uint16_t vNet_GetSourceAddress_M2();
+void vNet_RadioSleep_M2();
+void vNet_RadioWakeUp_M2();
 
 #endif

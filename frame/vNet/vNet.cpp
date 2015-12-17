@@ -62,7 +62,7 @@
 	#endif	
 	
 	#if(NRF24)
-		#include "drivers/mcu_avr/nRF24/vNetDriver_nrf24.cpp"
+		#include "drivers/generic/nRF24/vNetDriver_nrf24.cpp"
 	#endif	
 	
 	#if(HOPERF_RFM69)

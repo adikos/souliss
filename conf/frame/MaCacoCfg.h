@@ -216,8 +216,8 @@ const int MaCaco_funcode[MaCaco_FUNCODE_NO] = {0x01, 0x11, 0x02, 0x12,
 		according to the below table, the values cannot be exceeded, but all 
 		configuration with lower values are valid.
 				
-		The maximum number of nodes and slots depends on configuration as shown
-		in below table:
+		The maximum number of nodes in a network and slots in each node depends
+		on configuration as shown in below table:
 		
 					Nodes		Slots									
 					30			35

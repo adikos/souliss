@@ -31,4 +31,7 @@
 #define	C16TO8L(val) ((U8)((val) & 0x00FF))
 #define	C16TO8H(val) ((U8)(((val) & 0xFF00) >> 8))
 
+#define minumum(a, b)	(a < b ? a : b)
+#define maximum(a, b)	(a > b ? a : b)
+
 #endif
