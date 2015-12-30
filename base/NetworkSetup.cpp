@@ -354,7 +354,7 @@ void Souliss_SetAccessPoint()
 #if(USEEEPROM)
 uint8_t Souliss_ReadIPConfiguration()
 {
-	U8 i=0, timeout=20;
+	U8 i=0, timeout=200;
 
 	// If a valid configuration hasn't been found
 	if(Return_ID()!=STORE__DEFAULTID) 
