@@ -354,7 +354,7 @@ void Souliss_SetAccessPoint()
 #if(USEEEPROM)
 uint8_t Souliss_ReadIPConfiguration()
 {
-	U8 i=0, timeout=200;
+	U8 i=0, timeout=200;	//Changed from 20 to 200. Assure correct read of the values stored in EEPROM.
 
 	// If a valid configuration hasn't been found
 	if(Return_ID()!=STORE__DEFAULTID) 
